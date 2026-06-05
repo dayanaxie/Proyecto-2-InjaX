@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis de automatización laboral</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <h1 class="text-xl font-bold text-indigo-700">
+        Proyecto de Visualización
+      </h1>
+
+      <div class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#introduccion" class="hover:text-indigo-600 transition">
+          Introducción
+        </a>
+        <a href="#descripcion" class="hover:text-indigo-600 transition">
+          Descripción del Problema
+        </a>
+        <a href="#definicion" class="hover:text-indigo-600 transition">
+          Definición de la Fuente de Datos
+        </a>
+        <a href="#graficas" class="hover:text-indigo-600 transition">
+          Descripcion Detallada y Explicación
+        </a>
+        <a href="#conclusiones" class="hover:text-indigo-600 transition">
+          Conclusiones
+        </a>
+        <a href="#referencias" class="hover:text-indigo-600 transition">
+          Referencias
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="bg-white">
+    <div class="max-w-6xl mx-auto px-6 py-16 text-center">
+
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+        EDA Futuro del Trabajo
+      </h1>
+
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Análsis elaborado por Felipe Masís Calderón(2023047882) y Dayana Xie Li - 2022097967
+      </p>
+
+    </div>
+  </header>
+
+  <!-- Sections -->
+  <main class="max-w-6xl mx-auto px-6 py-12">
+
+
+    <section id="pregunta" class="mb-20">
+
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">
+          ¿En qué medida la inteligencia artificial está afectando el mercado laboral?
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed">
+          
+        </p>
+      </div>
+
+
+    </section>
+
+
+    <section id="introduccion" class="mb-20">
+
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">
+          Introducción
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed">
+          La inteligencia artificial (IA) está transformando el mercado laboral a una velocidad sin precedentes. Lo que hace unos años era un tema de debate teórico, hoy es una realidad que impacta directamente en la empleabilidad, los salarios y las habilidades requeridas en casi todos los sectores. Haciendo que surjan preguntas como ¿La IA nos va a reemplazar?, ¿Todos los empleos se verán afectados?, entre otras preguntas. Esta transformación genera incertidumbre, pero también abre oportunidades para quienes logran adaptarse. Comprender la magnitud y las características de este cambio es fundamental para anticipar sus efectos y diseñar estrategias de formación y política laboral efectivas. El presente análisis exploratorio de datos (EDA) busca entender a profundidad el futuro del trabajo en la era de la IA por medio de un dataset que contiene información detallada de cientos de perfiles profesionales, abarcando variables como el riesgo de automatización, la evolución salarial, la brecha de habilidades, el nivel de adopción de IA y características contextuales como industria, país y nivel educativo. A través de este análisis, se busca responder a una pregunta central que guía toda la exploración: ¿En qué medida la inteligencia artificial está afectando el mercado laboral?
+        </p>
+      </div>
+
+
+    </section>
+
+
+    <section id="descripcion" class="mb-20">
+
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">
+          Descripción del Problema
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed">
+          El avance de la inteligencia artificial ha introducido una serie de cambios estructurales en el mercado laboral que aún no se comprenden completamente. Si bien existe una percepción general de que la IA puede reemplazar empleos, la realidad es más compleja: algunos trabajos desaparecen, otros se transforman y muchos nuevos surgen en el proceso. Esto plantea un problema central: no solo se trata de determinar si la IA sustituye empleos, sino de entender cómo los está transformando. Uno de los principales desafíos radica en la heterogeneidad del impacto. No todos los sectores ni todos los roles se ven afectados de la misma manera. Mientras algunos trabajos presentan un alto riesgo de automatización, otros mantienen una relativa estabilidad debido a la necesidad de habilidades humanas difíciles de replicar, como la creatividad, la empatía o la toma de decisiones complejas. Al mismo tiempo, variables como el cambio salarial, la volatilidad económica y la necesidad de recapacitación añaden nuevas capas de complejidad al análisis. En este contexto, surge la necesidad de explorar cómo se relacionan estos factores entre sí. ¿Existe una relación directa entre el riesgo de automatización y la disminución salarial? ¿Los trabajos más expuestos a la IA requieren necesariamente una mayor adaptación de habilidades? ¿Qué papel juegan factores como la industria o la posibilidad de trabajo remoto en este proceso? Este proyecto aborda estas preguntas desde una perspectiva exploratoria, buscando identificar patrones, tendencias y posibles anomalías en los datos. Más que ofrecer respuestas definitivas, el objetivo es construir una comprensión más profunda del fenómeno, permitiendo visualizar cómo la inteligencia artificial está reconfigurando el mundo laboral en múltiples dimensiones.
+        </p>
+      </div>
+
+
+    </section>
+
+
+    <section id="definicion" class="mb-20">
+
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">
+          Definición de la Fuente de Datos
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed">
+          Para llevar a cabo este análisis, se utiliza un conjunto de datos titulado “Future of Work in the Age of AI (2020–2026)”, el cual recopila información sobre distintos roles laborales en múltiples industrias y países a lo largo del tiempo. Este dataset permite observar cómo han evolucionado diversas variables clave en el contexto de la adopción de inteligencia artificial. El conjunto de datos incluye información detallada sobre cientos de perfiles profesionales, considerando variables como el porcentaje de riesgo de automatización, los cambios salariales asociados a la adopción de IA, la volatilidad de los ingresos, así como indicadores relacionados con la adaptación laboral, como la urgencia de recapacitación y la presión por la transición de habilidades. Además, incorpora variables contextuales como la industria, el país, el nivel educativo requerido y la viabilidad de trabajo remoto. Una de las principales fortalezas de esta fuente de datos es su carácter multidimensional, lo que permite analizar no solo variables de forma aislada, sino también las interacciones entre ellas. Esto resulta especialmente útil en un contexto como el del mercado laboral, donde los cambios no ocurren de manera independiente, sino como parte de un sistema complejo de relaciones. Cabe destacar que, al tratarse de un dataset de carácter exploratorio, los datos deben interpretarse como una representación aproximada de tendencias generales y no como valores absolutos. Sin embargo, su riqueza en variables y su cobertura temporal lo convierten en una base sólida para identificar patrones relevantes y generar hipótesis sobre el impacto de la inteligencia artificial en el futuro del trabajo.
+        </p>
+      </div>
+
+
+    </section>
+
+
+    <section id="graficas" class="mb-20">
+
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">
+          Descripción Detallada y Explicación
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed">
+          Para comprender el impacto de la inteligencia artificial en el mercado laboral, el primer paso es explorar cada variable de forma individual. Antes de buscar relaciones o patrones complejos, es necesario conocer cómo se distribuyen los datos por sí solos, qué proporciones existen entre categorías y dónde se concentran los valores. Este punto de partida permite construir una base sólida sobre la cual irán tomando sentido las visualizaciones más complejas que siguen.
+        </p>
+      </div>
+
+
+      <div class="grid grid-cols-1 gap-10">
+
+
+        <article class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+
+          <div class="mb-5">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              Distribución de empleos por categoría de riesgo de automatización
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed">
+              Para comprender el impacto de la inteligencia artificial en el mercado laboral, el primer paso es explorar cada variable de forma individual. Antes de buscar relaciones o patrones complejos, es necesario conocer cómo se distribuyen los datos por sí solos, qué proporciones existen entre categorías y dónde se concentran los valores. Este punto de partida permite construir una base sólida sobre la cual irán tomando sentido las visualizaciones más complejas que siguen. El primer aspecto a observar es cómo se distribuyen los empleos según su nivel de riesgo de automatización de forma categórica. Esta gráfica de barras muestra la cantidad de registros clasificados en tres categorías: bajo, medio y alto riesgo. La altura de cada barra permite comparar directamente cuántos empleos pertenecen a cada grupo. Las tres categorías presentan una distribución relativamente equilibrada, con una leve predominancia de los empleos clasificados como riesgo alto y medio sobre los de riesgo bajo. Esto indica que la mayoría de los roles analizados se encuentran en una zona de vulnerabilidad considerable frente a la automatización, lo cual sitúa el debate no en si la IA afecta el mercado laboral, sino en qué medida y bajo qué condiciones lo hace.
+            </p>
+          </div>
+
+          <div class="w-full overflow-x-auto bg-white rounded-xl border border-gray-100 p-4">
+            <img src="assets/.svg" alt="Distribución de empleos por categoría de riesgo de automatización" class="max-w-full h-auto mx-auto">
+          </div>
+
+        </article>
+
+
+        <article class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+
+          <div class="mb-5">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              Distribución del riesgo de automatización
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed">
+              Sin embargo, las categorías por sí solas no revelan la magnitud real del riesgo dentro de cada grupo. Para entender cómo se distribuye ese riesgo de forma continua, el siguiente histograma desglosa el espectro completo en intervalos y muestra cuántos empleos caen en cada rango. La distribución muestra una forma asimétrica con sesgo hacia la derecha: los empleos se concentran progresivamente entre el 25% y el 75% de riesgo, alcanzando su punto más alto alrededor del 50-60%, para luego caer a partir del 77%. Esto confirma que pocos empleos escapan completamente a la amenaza de automatización, pero también que muy pocos enfrentan un riesgo extremo cercano al 100%. La mayor parte del mercado laboral analizado opera en una zona de riesgo medio-alto, lo que plantea un escenario de transformación gradual más que de sustitución masiva e inmediata.
+            </p>
+          </div>
+
+          <div class="w-full overflow-x-auto bg-white rounded-xl border border-gray-100 p-4">
+            <img src="assets/.svg" alt="Distribución del riesgo de automatización" class="max-w-full h-auto mx-auto">
+          </div>
+
+        </article>
+
+
+        <article class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+
+          <div class="mb-5">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              Distribucion del cambio salarial tras la adopción de IA
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed">
+              Para cerrar esta primera exploración individual, vale la pena preguntarse: ¿cómo ha afectado económicamente la adopción de IA a los trabajadores? Esta gráfica de pastel clasifica los empleos en tres grupos según la dirección de su cambio salarial: aquellos cuyo salario subió más de un 5%, los que bajaron más de un 5%, y los que se mantuvieron sin cambios significativos. La distribución muestra que aproximadamente un 31% de los empleos experimentaron una subida salarial considerable y un 30.6% una bajada, mientras que el grupo más numeroso, con un 38.4%, se mantuvo sin cambios relevantes. Este equilibrio relativo entre subidas y bajadas es en sí mismo un hallazgo significativo: contrario a la narrativa más pesimista sobre el impacto de la IA, los datos no respaldan una caída salarial generalizada. Para la mayoría de los trabajadores, la adopción de inteligencia artificial no ha implicado una pérdida económica directa, al menos no de forma inmediata o uniforme.
+            </p>
+          </div>
+
+          <div class="w-full overflow-x-auto bg-white rounded-xl border border-gray-100 p-4">
+            <img src="assets/.svg" alt="Distribucion del cambio salarial tras la adopción de IA" class="max-w-full h-auto mx-auto">
+          </div>
+
+        </article>
+
+
+        <article class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+
+          <div class="mb-5">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              Distribucion Riesgo de automatización por industria
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed">
+              Sin embargo, estos promedios globales pueden estar ocultando diferencias importantes. Un trabajador del sector salud, un programador en tecnología y un operario en manufactura no enfrentan la misma realidad frente a la automatización, y es razonable suponer que sus trayectorias salariales tampoco siguen el mismo patrón. El impacto económico de la IA probablemente no se distribuye de forma homogénea entre industrias, sino que responde a las particularidades de cada sector: el tipo de tareas que lo componen, el grado de digitalización alcanzado y la velocidad con que la automatización ha penetrado en sus procesos productivos. Para explorar esta heterogeneidad, el siguiente paso es cruzar el riesgo de automatización con la industria de cada empleo. La pregunta que guía esta nueva visualización es concreta: ¿todas las industrias se ven afectadas de la misma manera, o algunas concentran una mayor proporción de empleos en las categorías de mayor vulnerabilidad? La siguiente gráfica de barras agrupadas ofrece una respuesta visual a esa pregunta, mostrando para cada sector cuántos empleos pertenecen a cada categoría de riesgo: bajo, medio y alto. En todas las industrias predomina la categoría de riesgo medio, seguida del riesgo alto y luego el bajo. Este patrón se repite de forma consistente sin importar el sector, lo que confirma que el riesgo de automatización no es un fenómeno concentrado en industrias específicas sino una presión transversal que atraviesa el mercado laboral en su conjunto. Ninguna industria escapa a esta dinámica, aunque sectores como energía y finanzas muestran una proporción ligeramente mayor de empleos en riesgo alto en comparación con los demás.
+            </p>
+          </div>
+
+          <div class="w-full overflow-x-auto bg-white rounded-xl border border-gray-100 p-4">
+            <img src="assets/industry_automation.svg" alt="Distribucion Riesgo de automatización por industria" class="max-w-full h-auto mx-auto">
+          </div>
+
+        </article>
+
+
+        <article class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+
+          <div class="mb-5">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              Distribucion de la urgencia de recapacitación por categoría de riesgo
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed">
+              Ahora bien, saber que el riesgo es transversal no responde todavía si ese riesgo tiene consecuencias concretas para los trabajadores. Una de las más directas es la presión para recapacitarse. La siguiente gráfica de densidad muestra la distribución de la urgencia de recapacitación para cada categoría de riesgo, permitiendo ver si los trabajadores más expuestos a la automatización enfrentan también una mayor presión para actualizar sus habilidades. Las tres distribuciones presentan formas similares pero desplazadas claramente hacia la derecha conforme aumenta el riesgo. Los empleos de bajo riesgo se concentran alrededor de una urgencia de 25 puntos, los de riesgo medio alrededor de 35 y los de alto riesgo cerca de 46. El escaso solapamiento entre las curvas confirma que existe una relación directa y consistente: a mayor riesgo de automatización, mayor es la presión que enfrentan los trabajadores para recapacitarse. Este hallazgo conecta directamente con lo que se explorará a continuación, donde el análisis se amplía para incorporar simultáneamente múltiples dimensiones del impacto de la IA en el mundo laboral.
+            </p>
+          </div>
+
+          <div class="w-full overflow-x-auto bg-white rounded-xl border border-gray-100 p-4">
+            <img src="assets/urgency_risk.svg" alt="Distribucion de la urgencia de recapacitación por categoría de riesgo" class="max-w-full h-auto mx-auto">
+          </div>
+
+        </article>
+
+
+        <article class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+
+          <div class="mb-5">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              Relación entre riesgo de automatización y cambio salarial
+            </h3>
+
+            <p class="text-gray-600 leading-relaxed">
+              Al explorar la relación entre el riesgo de automatización y los cambios salariales, nos encontramos con un panorama revelador. En esta gráfica multidimensional, cada punto representa un rol laboral; su posición horizontal indica el porcentaje estimado de automatización, mientras que la vertical refleja la variación salarial tras la adopción de inteligencia artificial. El tamaño de cada punto añade una tercera dimensión: la volatilidad de los salarios en ese puesto. Además, los colores distinguen los sectores industriales, y es posible aislar cada industria para estudiarla de manera independiente, facilitando la comparación entre ellas. Por lo que permite explorar tres variables simultáneamente en un mismo espacio visual: para leerla, conviene partir del eje horizontal, donde cuanto más a la derecha se ubica un punto, mayor es su riesgo de automatización. La altura indica si el salario subió o bajó, y el tamaño del punto refleja qué tan volátil es ese salario. Los colores identifican la industria de cada rol. Al mirar hacia la derecha, donde el riesgo es más alto, encontramos una mezcla interesante: algunos puestos muestran cambios salariales positivos, otros negativos, y entre ellos destacan roles como los representantes de servicio al cliente (customer support rep) y los conductores de camión (truck driver). En estos casos, la urgencia de recapacitación es alta, independientemente de si su salario subió o bajó. Esto sugiere que, aunque el riesgo de automatización sea elevado, el impacto económico puede variar, pero la necesidad de actualizar habilidades se mantiene como una constante. Otro detalle interesante es cómo se comporta la urgencia de recapacitación a medida que aumenta el riesgo. En general, cuando el riesgo es bajo, la urgencia también tiende a ser baja, a medida que el riesgo crece, la urgencia va subiendo. Sin embargo, hay puestos con riesgo alto que no tienen una urgencia tan alta, pero la tendencia es clara. Esto sugiere que los trabajadores en empleos más expuestos a la IA sienten (o se les exige) una mayor presión para actualizarse. En cuanto al rango de los datos, todos los puntos se concentran entre el 5% y el 95% de riesgo. No hay empleos con riesgo 0% ni 100%, lo cual tiene sentido: ningún trabajo está completamente a salvo de la automatización ni totalmente condenado a desaparecer. Dentro de ese espectro, las industrias de salud, manufactura, transporte y tecnología muestran un patrón parecido: la mayoría de sus puestos se concentran entre el 20% y el 80% de riesgo, y los cambios salariales se mueven entre una caída del 20% y un aumento del 20%. Aunque son sectores muy distintos, comparten ese rango común. Un mismo rol puede tener comportamientos distintos en diferentes lugares, lo que nos recuerda que el impacto de la IA no solo depende del tipo de trabajo, sino también del contexto donde se desempeña.
+            </p>
+          </div>
+
+          <div class="w-full overflow-x-auto bg-white rounded-xl border border-gray-100 p-4">
+            <img src="assets/multidimensional.svg" alt="Relación entre riesgo de automatización y cambio salarial" class="max-w-full h-auto mx-auto">
+          </div>
+
+        </article>
+
+
+      </div>
+
+
+    </section>
+
+
+    <section id="conclusiones" class="mb-20">
+
+      <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">
+          Conclusiones
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed">
+          El análisis exploratorio realizado permite responder con mayor profundidad la preguntaque guió este proyecto: ¿en qué medida la inteligencia artificial está afectando el mercado laboral? La respuesta no es simple ni uniforme, pero los datos apuntan a una conclusión clara: la IA está transformando el mercado laboral de forma transversal, progresiva y multidimensional, con efectos que varían según la dimensión que se analice. En términos de riesgo, la mayoría de los empleos analizados se sitúa en una zona de vulnerabilidad media-alta, sin que ninguna industria escape a esta presión. No se trata de un fenómeno concentrado en sectores específicos, sino de una fuerza que atraviesa transversalmente el mercado laboral. Esto desmiente la idea de que solo ciertos trabajos “de baja calificación” están en riesgo: la exposición a la automatización es amplia y heterogénea. En el plano económico, la IA no ha generado una caída salarial generalizada, sino efectos diferenciados que dependen del rol, la industria y el contexto. La dimensión donde el impacto resulta más consistente y directa es la formativa. A mayor riesgo de automatización, mayor urgencia de recapacitación, y esta relación se mantiene independientemente del sector o del país. Los empleos más expuestos a la IA son también los que más presión formativa enfrentan, lo que convierte la actualización de habilidades en el verdadero eje del futuro del trabajo. Sectores como tecnología lideran esta presión de forma estructural, mientras que manufactura y transporte la experimentan de manera más cíclica. Finalmente, más allá de los hallazgos específicos de cada visualización, este análisis deja en evidencia que el impacto de la inteligencia artificial en el mercado laboral no puede leerse en una sola dimensión. El riesgo existe y es amplio, pero no se traduce automáticamente en pérdidas económicas ni en desempleo masivo. Lo que sí genera, de forma consistente y creciente en todos los sectores analizados, es una presión sostenida hacia la adaptación: aprender nuevas habilidades, asumir nuevos roles y mantenerse empleable en un entorno que evoluciona más rápido que los sistemas de formación diseñados para preparar a las personas. Volviendo a la pregunta central que guió todo el proyecto, ¿en qué medida la inteligencia artificial está afectando el mercado laboral?, la respuesta que emerge de los datos es clara pero matizada: la IA no está eliminando el trabajo, lo está redefiniendo. Y esa redefinición no ocurre de golpe ni de forma uniforme, sino de manera gradual, diferenciada y profundamente ligada al tipo de rol, la industria y el contexto en el que cada trabajador se desempeña. En ese sentido, comprender este fenómeno exige abandonar las narrativas simplistas de “empleos perdidos versus empleos ganados” y adoptar una mirada más compleja. Los datos no predicen el futuro, pero sí trazan con claridad el terreno sobre el que se está construyendo: uno donde la capacidad de adaptarse ya no es una ventaja competitiva, sino una condición estructural del trabajo en la era de la inteligencia artificial.
+        </p>
+      </div>
+
+
+    </section>
+
+
+  </main>
+  <!-- Referencias a los gists publicados -->
+    <section id="referencias" class="bg-gray-100 border-t border-gray-200 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+
+        <div class="mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">
+            Referencias a los gists publicados
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed">
+            En esta sección se incluyen los enlaces a los gists utilizados para la generación de las visualizaciones del proyecto.
+        </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6">
+
+
+        <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Gráfica de barras agrupadas (2 variables)
+            </h3>
+
+            <p class="text-gray-600 mb-4 leading-relaxed">
+            Código utilizado para representar la cantidad de registros por industria y categoría de riesgo de automatización.
+            </p>
+
+            <a href="https://gist.github.com/dayanaxie/3ef373d4b2aac5a767a9406ccac3859e"
+            target="_blank"
+            class="inline-block text-indigo-600 font-semibold hover:text-indigo-800 transition">
+            Ver gist publicado
+            </a>
+
+        </article>
+
+
+        <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Gráfica de densidad (2 variables)
+            </h3>
+
+            <p class="text-gray-600 mb-4 leading-relaxed">
+            Código utilizado para representar la distribución de la urgencia de recapacitación según la categoría de riesgo.
+            </p>
+
+            <a href="https://gist.github.com/dayanaxie/d59e0585067dd7a08ff4ae53233fe547"
+            target="_blank"
+            class="inline-block text-indigo-600 font-semibold hover:text-indigo-800 transition">
+            Ver gist publicado
+            </a>
+
+        </article>
+
+
+        <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Gráfica de dispersión (5 variables)
+            </h3>
+
+            <p class="text-gray-600 mb-4 leading-relaxed">
+            Código utilizado para relacionar el porcentaje de riesgo de automatización con el cambio porcentual salarial.
+            </p>
+
+            <a href="https://gist.github.com/dayanaxie/17f6430191d63c166c1246c3e2d6bdb1"
+            target="_blank"
+            class="inline-block text-indigo-600 font-semibold hover:text-indigo-800 transition">
+            Ver gist publicado
+            </a>
+
+        </article>
+
+
+        <article class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Sitio web
+            </h3>
+
+            <p class="text-gray-600 mb-4 leading-relaxed">
+            Código utilizado para crear el sitio web.
+            </p>
+
+            <a href="https://gist.github.com/dayanaxie/384aee526c17028454961207cca6745c"
+            target="_blank"
+            class="inline-block text-indigo-600 font-semibold hover:text-indigo-800 transition">
+            Ver gist publicado
+            </a>
+
+        </article>
+
+
+        </div>
+
+    </div>
+    </section>
+</body>
+</html>
